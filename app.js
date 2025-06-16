@@ -16,7 +16,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173", "https://sangita-ten.vercel.app"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Content-Length", "X-Requested-With"],
@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.options(/.*/, cors({
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173", "https://sangita-ten.vercel.app"],
   credentials: true,
 }));
 
